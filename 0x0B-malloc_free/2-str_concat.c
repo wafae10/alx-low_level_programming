@@ -36,5 +36,3 @@ i++, ci++;
 conct[i] = '\0';
 return (conct);	
 }
-
-
