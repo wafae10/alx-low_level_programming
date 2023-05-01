@@ -13,12 +13,12 @@ if (!head)
 return (NULL);
 while (A && B && B->next)
 {
-B = B->next->next;
+B = B->next;
 A = A->next;
 if (B == A)
 {
 A = head;
-while (A != B)
+while (A!= B)
 {
 A = A->next;
 B = B->next;
