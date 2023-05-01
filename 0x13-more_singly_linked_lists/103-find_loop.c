@@ -3,7 +3,7 @@
 * find_listint_loop - finds the loop in a listint_t type list
 * @head: linked list to be searched for
 *
-* return: address of the node where the loop starts, or NULL if failed
+* Return: address of the node where the loop starts, or NULL if failed
 */
 listint_t *find_listint_loop(listint_t *head)
 {
@@ -28,3 +28,4 @@ return (B);
 }
 return (NULL);
 }
+
