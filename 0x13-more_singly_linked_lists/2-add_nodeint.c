@@ -4,7 +4,7 @@
 * @head: pointer to the first node in the linked list
 * @n: data to input in that new node.
 *
-* return:  the address of the new element(if success) , or NULL (if fail)
+* Return: the address of the new element(if success) , or NULL (if fail)
 */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
