@@ -3,19 +3,19 @@
 * reverse_listint - reverses a listint_t list.
 * @head: pointer to the first node in the list.
 *
-* return: adress to the first node in the new list.
+* Return: adress to the first node in the new list.
 */
 listint_t *reverse_listint(listint_t **head)
 {
-listint_t *prev = NULL;
-listint_t *next = NULL;
+listint_t *prv = NULL;
+listint_t *nxt = NULL;
 while (*head)
 {
-next = (*head)->next;
-(*head)->next = prev;
-prev = *head;
+nxt = (*head)->nxt;
+(*head)->nxt = prv;
+prv = *head;
 *head = next;
 }
-*head = prev;
+*head = prv;
 return (*head);
 }
