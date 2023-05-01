@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
-* reverse_listint - reverses a listint list
-* @head: pointer to the first node in the list
+* reverse_listint - reverses a listint_t list.
+* @head: pointer to the first node in the list.
 *
-* Return: adress to the first node in the new list
+* Return: adress to the first node in the new list.
 */
 listint_t *reverse_listint(listint_t **head)
 {
@@ -17,6 +17,6 @@ prv = *head;
 *head = nxt;
 }
 *head = prv;
-return(*head);
+return (*head);
 }
 
