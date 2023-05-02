@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
 * find_listint_loop - finds the loop in a listint.
-* @head: linked list to be search.
+* @head: linked list to be searched.
 *
-* Return: address of the node where the loop starts (if success), or NULL (if fail).
+* Return: address of the node where the loop starts if sucess, or NULL.
 */
 listint_t *find_listint_loop(listint_t *head)
 {
@@ -18,7 +18,7 @@ A = A->next;
 if (B == A)
 {
 A = head;
-while (A!= B)
+while (A != B)
 {
 A = A->next;
 B = B->next;
