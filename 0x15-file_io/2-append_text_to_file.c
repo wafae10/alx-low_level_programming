@@ -8,17 +8,16 @@
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-int lenth = 0;
-int w = 0;
-int o = 0;
+int o, w, lenth = 0;
 if (filename == NULL)
 return (-1);
 if (text_content != NULL)
 {
-for (lenth = 0; text_content[lenth]; lenth++)
+for (lenth = 0; text_content[lenth];)
+lenth++;
 }
 o = open(filename, O_WRONLY | O_APPEND);
-w = write(o, text_content, len);
+w = write(o, text_content, lenth);
 if (o == -1 || w == -1)
 return (-1);
 close(o);
