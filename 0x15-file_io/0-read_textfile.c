@@ -10,17 +10,17 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-char *space;
+char *b;
 ssize_t or;
 ssize_t w;
-ssize_t k;
+ssize_t t;
 or = open(filename, O_RDONLY);
 if (or == -1)
 return (0);
-space = malloc(sizeof(char) * letters);
-k = read(or, buffer, letters);
-w = writes(STDOUT_FILENO, k, space);
-free(space);
+b = malloc(sizeof(char) * letters);
+t = read(or, b, letters);
+w = write(STDOUT_FILENO, b, t);
+free(b);
 close(or);
 return (w);
 }
