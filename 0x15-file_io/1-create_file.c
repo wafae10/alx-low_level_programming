@@ -17,7 +17,7 @@ for (len = 0; text_content[len]; len++)
 }
 or = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 w = write(or, text_content, len);
-if (fd == -1 || w == -1)
+if (or == -1 || w == -1)
 return (-1);
 close(or);
 return (1);
